@@ -4,25 +4,31 @@
 		<title>CANdles Broh</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/style.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+		<link
+		href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+		rel="stylesheet"
+	  />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body>
-	
+	<div id="root">
 
-<script>
-function getData(data) {
-	if (data.ok) {
-	console.log(data)
-	} else {
-	console.log({
-	status: data.status, 
-	error: data.error
-	});
-	}
-}
-</script>
-<script id="user"></script>
-<script id="listings"></script>
+	</div>
+
+		<script>
+		function getData(data) {
+			if (data.ok) {
+			console.log(data)
+			} else {
+			console.log({
+			status: data.status, 
+			error: data.error
+			});
+			}
+		}
+		</script>
+		<script id="user"></script>
+		<script id="listings"></script>
 	</body>
 </html>
