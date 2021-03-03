@@ -7,7 +7,8 @@
   
   .home,
   .products,
-  .contact {
+  .contact,
+  .sustainability {
     display: flex;
     height: 90vh;
     align-items: center;
@@ -15,7 +16,7 @@
     font-size: 3rem;
   }
   
-  .services {
+  .sustainability {
     background-image: url('./images/img-2.jpg');
     background-position: center;
     background-size: cover;
@@ -33,7 +34,7 @@
     font-size: 100px;
   }
   
-  .sign-up {
+  .contact {
     background-image: url('./images/img-8.jpg');
     background-position: center;
     background-size: cover;

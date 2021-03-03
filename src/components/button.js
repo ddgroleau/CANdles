@@ -22,7 +22,7 @@ export const Button =({
                 className={`btn ${checkButtonStyle} ${checkButtonSize}`}
                 onClick={onClick}
                 type={type}
-                > Contact </button>
+                >{children}</button>
             </Link>
         )
     };
