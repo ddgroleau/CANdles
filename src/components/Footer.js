@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/footer.css';
-import { Button } from './button';
+import { Button } from './Button';
 
 function Footer() {
     return (

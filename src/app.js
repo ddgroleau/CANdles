@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from "./components/navbar"
+import Navbar from "./components/Navbar"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './assets/app.css'
-import Home from './components/pages/home';
+import Home from './components/pages/Home';
 import Products from './components/pages/Products';
-import Sustainability from './components/pages/Sustainability';
+import Sustainability from './components/pages/About';
 import Contact from './components/pages/Contact';
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
               component={Home} />
               <Route path="/products" exact 
               component={Products} />
-              <Route path="/sustainability" exact 
+              <Route path="/about" exact 
               component={Sustainability} />
               <Route path="/contact" exact 
               component={Contact} />

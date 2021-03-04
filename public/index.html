@@ -14,19 +14,31 @@
 	<body>
 	<div id="root"></div>
 
-		<script>
-		function getData(data) {
-			if (data.ok) {
-			console.log(data)
-			} else {
-			console.log({
-			status: data.status, 
-			error: data.error
-			});
+	<div id='scripts'>
+
+		<script id="function">
+			let userDetails = {}
+			let userListings = {user: ""}			
+			function getData(data) {
+				if (data.ok) {
+				console.log(data.results);
+				user= {user: data.results}
+				const listings = {listings: data.results}
+				return data.results;
+				} else {
+				console.log({
+					status: data.status,
+					error: data.error
+				});
+				return {
+					status: data.status,
+					error: data.error
+				};
+				}
 			}
-		}
 		</script>
 		<script id="user"></script>
 		<script id="listings"></script>
+	</div>
 	</body>
 </html>

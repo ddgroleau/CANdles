@@ -1,7 +1,7 @@
 import '../../assets/app.css';
-import HomeSection from '../homeSection';
+import HomeSection from '../HomeSection';
 import React from 'react';
-import Cards from '../cards'
+import Cards from '../Cards'
 import Footer from '../Footer';
 
 function Home() {

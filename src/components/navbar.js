@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from './button'
+import { Button } from './Button'
 import '../assets/navbar.css';
 
 
@@ -41,8 +41,8 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to="/sustainability" className="nav-links" onClick={closeMobileMenu}>
-                                Sustainability
+                            <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+                                About
                             </Link>
                         </li>
                         <li>
