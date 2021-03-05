@@ -21,9 +21,6 @@
 			let userListings = {user: ""}			
 			function getData(data) {
 				if (data.ok) {
-				console.log(data.results);
-				user= {user: data.results}
-				const listings = {listings: data.results}
 				return data.results;
 				} else {
 				console.log({

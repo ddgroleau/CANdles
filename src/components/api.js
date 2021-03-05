@@ -10,13 +10,17 @@ const Account = {
     getListings() {
       document.getElementById('listings').setAttribute('src', (this.LISTINGS_URL + this.KEY));
     },
-    async getJsonpData() {
-      const req = await fetchJsonp(this.LISTINGS_URL + this.KEY);
-      const res = await req.json();
-      console.log(res);
+    async getJsonpUser() {
+      const userRequest = await fetchJsonp(this.user_URL + this.KEY);
+      const userResponse = await userRequest.json();
+      return userResponse.results
+    },
+    async getJsonpListing() {
+      const listingRequest = await fetchJsonp(this.LISTINGS_URL + this.KEY);
+      const listingsResponse = await listingRequest.json();
+      return listingsResponse.results;
     }
-    }
-
+  }
 
 export default Account;
 
