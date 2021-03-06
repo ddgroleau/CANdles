@@ -11,12 +11,12 @@ const Account = {
       document.getElementById('listings').setAttribute('src', (this.LISTINGS_URL + this.KEY));
     },
     async getJsonpUser() {
-      const userRequest = await fetchJsonp(this.user_URL + this.KEY);
+      const userRequest = await fetchJsonp(this.user_URL + this.KEY + "&includes=MainImage");
       const userResponse = await userRequest.json();
       return userResponse.results
     },
     async getJsonpListing() {
-      const listingRequest = await fetchJsonp(this.LISTINGS_URL + this.KEY);
+      const listingRequest = await fetchJsonp(this.LISTINGS_URL + this.KEY + "&includes=MainImage");
       const listingsResponse = await listingRequest.json();
       return listingsResponse.results;
     }

@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import CardItem from './CardItem';
 import '../assets/cards.css';
 import Account from './API';
-import img9 from '../assets/images/img-9.jpg';
 
 function Cards() {
 const [listings, setListings] = useState([{
     title: "",
     listing_id: "",
-    url: '/products'
+    url: '/products',
+    price: "",
+    MainImage: {"url_fullxfull": ""}
 }]);
 useEffect(() => {
     Account.getJsonpListing().then(res => setListings(res))
@@ -20,15 +21,14 @@ console.log(listings);
             <div className='cards__container'>
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>
-                    
                     {listings.map((listing, id) => 
- <CardItem           
- src={img9}
- listing={listing.title}
- label="1"
- key={id}
- path={listing.url}
-/>
+                        <CardItem           
+                        src={listing.MainImage.url_fullxfull}
+                        listing={listing.title.slice(0,listing.title.indexOf("-"))}
+                        label={"$" + listing.price}
+                        key={id}
+                        path={listing.url}
+                        />
                     )}  
                     </ul>
                 </div>
