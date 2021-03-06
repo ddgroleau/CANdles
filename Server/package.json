@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server for CANdles",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fetch-jsonp": "^1.1.3",
+    "mongodb": "^3.6.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Dan Groleau",
+  "license": "MIT"
+}
