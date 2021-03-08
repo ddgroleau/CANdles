@@ -4,12 +4,16 @@ const dotenv = require('dotenv').config('.env');
 const bodyParser = require('body-parser');
 const Router = express.Router();
 const { response, request } = require('express');
-const database = require('./database')
+const subscribers = require('./subscribers');
+const MongoDB = require('./database')
 
 // EXPRESS
 const app = express();
 const port = process.env.PORT || 4000
-app.listen(port, () => console.log(`Server started at Port: ${port}`));
+app.listen(port, () => {
+    console.log(`Server started at Port: ${port}`);
+    MongoDB.connection;
+});
 app.use(express.json({limit: '1mb'}));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
@@ -22,6 +26,7 @@ app.get('/', (req,res)=> {
 console.log(__dirname);
 */
 
+app.use('/', subscribers);
 
 // Error Handling 
 app.use((request, response) => {

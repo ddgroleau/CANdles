@@ -3,14 +3,21 @@ const MongoClient = require('mongodb').MongoClient;
 const uri = process.env.MONGODB_CONNECTION;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-client.connect(err => {
-if (err) console.log('Connection to database failed.');
-  console.log('Connection to database successful!');
-  const db = client.db("Candles");
-  const products = client.db("Candles").collection("Products");
-  client.close();
-});
+
+const MongoDB = {
+  connection: client.connect(async err => {
+    if (err) console.log('Connection to database failed.');
+    this.database = client.db("Candles")
+    this.products = this.database.collection("Products")
+    this.subscribers = this.database.collection("Subscribers")
+    console.log(`Connection to database: ${this.database.databaseName} successful!`)
+    }),
+
+  database: '',
+  products: '',
+  subscribers: ''
+}
 
 
+module.exports = MongoDB;
 
-module.exports = client;
