@@ -13,10 +13,10 @@ function Footer() {
                     More stuff down here Broh...
                 </p>
                 <div className='input areas'>
-                    <form>
-                        <input type='email' name='email' placeholder="Yo mama!"
+                    <form action="/subscribers" method="POST">
+                        <input type='email' name='email' placeholder="Your email"
                         className='footer-input' />
-                        <Button buttonStyle='btn--outline'>Subscribe To Me Mortal</Button>
+                        <button type="submit" className='btn--outline'>Subscribe To Me Mortal</button>
                     </form>
                 </div>
             </section>

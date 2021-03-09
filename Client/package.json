@@ -40,5 +40,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://beta-api.etsy.com"
+  "proxy": "http://localhost:4000"
 }
