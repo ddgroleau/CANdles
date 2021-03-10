@@ -14,7 +14,6 @@ const [listings, setListings] = useState([{
 useEffect(() => {
     Account.getJsonpListing().then(res => setListings(res))
 }, []); 
-console.log(listings);
     return (
         <div className='cards'>
             <h1>Check it out broh!</h1>

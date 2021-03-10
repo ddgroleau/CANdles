@@ -26,19 +26,18 @@ Router.post('/subscribers', async (request, response)=> {
         const newEmail = request.body.email;
         console.log(`I got a request! ${newEmail}`)
         const newSubscriber = {email: newEmail, timeStamp: `${formattedDate}` }
-        console.log(newSubscriber);
         try {
             const p = await subscribers.insertOne(newSubscriber);
             const newEntry = await subscribers.findOne( {email: newEmail} );
-            console.log(newEntry);
-            response.json(newEntry);
+            console.log("Database updated successfully.");
+            response.send(JSON.stringify(newEntry));
         } 
         catch (error) {
             console.log("There was an error.");
+            response.send({message: "There was an error.", fullError: error})
         }
     }
 })
-
 
 
 module.exports = Router;
