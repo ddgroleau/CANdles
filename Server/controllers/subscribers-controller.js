@@ -1,10 +1,9 @@
+const { NamedModulesPlugin } = require('webpack');
+const { MongoDB, client } = require('../database')
 const { response, request } = require('express');
 const express = require('express');
-const MongoClient = require('mongodb');
-const Router = express.Router();
-const { MongoDB, client } = require('./database')
 
-Router.get('/subscribers', (request, response) => {
+const readSubscribers = (request, response) => {
     if (client.isConnected()) {
         const database = client.db("Candles");
         const subscribers = database.collection("Subscribers");
@@ -14,10 +13,9 @@ Router.get('/subscribers', (request, response) => {
             }
     response.send(result);
     })} else {response.send("Data not available yet. Please refresh and try again.")}
-})
+}
 
-
-Router.post('/subscribers', async (request, response)=> {
+const createSubscribers = async (request, response)=> {
     if (client.isConnected()) {
         const database = client.db("Candles");
         const subscribers = database.collection("Subscribers");
@@ -37,7 +35,6 @@ Router.post('/subscribers', async (request, response)=> {
             response.send({message: "There was an error.", fullError: error})
         }
     }
-})
+}
 
-
-module.exports = Router;
+module.exports = { readSubscribers, createSubscribers }

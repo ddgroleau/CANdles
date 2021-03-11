@@ -4,8 +4,10 @@ const dotenv = require('dotenv').config('.env');
 const bodyParser = require('body-parser');
 const Router = express.Router();
 const { response, request } = require('express');
-const subscribers = require('./subscribers');
-const MongoDB = require('./database')
+const subscribers = require('./routes/subscribers');
+const products = require('./routes/products');
+const MongoDB = require('./database');
+
 
 // EXPRESS
 const app = express();
@@ -27,6 +29,8 @@ console.log(__dirname);
 */
 
 app.use('/', subscribers);
+app.use('/', products);
+
 
 // Error Handling 
 app.use((request, response) => {
@@ -43,3 +47,4 @@ response.json({
     }
 });
 });
+
