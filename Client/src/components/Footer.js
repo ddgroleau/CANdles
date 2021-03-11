@@ -3,7 +3,7 @@ import '../assets/footer.css';
 
 function Footer() {
     const handleClick = async () => {
-        if (document.getElementById('subscriber').value != null) {
+        if (document.getElementById('subscriber').value.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
             let data = {email: document.getElementById('subscriber').value};
             console.log(`Sending this email to the server: ${data.email}`);
             const request = await fetch("/subscribers", {
@@ -12,31 +12,43 @@ function Footer() {
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            })
-            const response = await request.json()
-            console.log(response)
+            });
+            const response = await request.json();
+            const input= document.getElementById("subscriber");
+            console.log(response);
+            if (!JSON.stringify(response).includes("MongoError")) {
             setTimeout(()=>{
-                document.getElementById("subscriber").value=""
-                document.getElementById("subscriber").placeholder= "Success!"
+                input.value="";
+                input.placeholder= "Success!";
                 document.getElementById("serverSuccess").style.visibility = "visible";
             },800);
             setTimeout(()=>{
-                window.location.reload()
+                window.location.reload();
                 return false;
             },1800);
-            
         } else {
             setTimeout(()=>{
-                document.getElementById("subscriber").value=""
-                document.getElementById("subscriber").placeholder= "Uh Oh. Try again."
+                input.value="";
+                input.placeholder= "Uh Oh. Try again.";
                 document.getElementById("serverFailure").style.visibility = "visible";
             },800);
             setTimeout(()=>{
-                window.location.reload()
+                window.location.reload();
                 return false;
-            },1800);
+            },2200);
+        };
+        } else {
+            setTimeout(()=>{
+                document.getElementById("subscriber").value="";
+                document.getElementById("subscriber").placeholder= "Uh Oh. Try again.";
+                document.getElementById("serverFailure").style.visibility = "visible";
+            },800);
+            setTimeout(()=>{
+                window.location.reload();
+                return false;
+            },2200);
         }
-    }
+    };
     return (
         <div className='footer-container'>
             <section className='footer-subscription'>
