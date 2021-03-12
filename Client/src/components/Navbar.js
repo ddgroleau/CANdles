@@ -24,12 +24,22 @@ function Navbar() {
               <div className="navbar-container">
                   <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                       CANdles
-                       <i className="fas fa-glass-whiskey"></i>
                   </Link>
+                 
                   <div className='menu-icon' onClick={handleClick}>
                       <i className={ click ? 'fas fa-times' : 'fas fa-bars' } />
                   </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                        <li className='nav-item'>
+                            <a href="https://www.instagram.com/can_dles5280/" className="nav-links" onClick={closeMobileMenu}>
+                            <i className="fab fa-instagram fa-2x"></i>
+                            </a>
+                        </li>
+                        <li className='nav-item'>
+                            <a href="https://www.etsy.com/shop/CANdles5280" className="nav-links" onClick={closeMobileMenu}>
+                            <i className="fab fa-etsy fa-2x"></i>
+                            </a>
+                        </li>
                         <li className='nav-item'>
                             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                                 Home
@@ -51,7 +61,7 @@ function Navbar() {
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>Contact</Button>}
+                    {button && <Button page="/contact" buttonStyle='btn--outline'>Contact</Button>}
               </div>
           </nav>
 

@@ -17,21 +17,31 @@
   }
   
   .about {
-    background-image: url('./images/img-2.jpg');
+    background-image: url('./images/about_banner.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
+  }
+
+  .about h1 {
+  color:black;
+  margin-left: 35%;
+  font-size: 5rem;
   }
   
   .products {
-    background-image: url('./images/img-1.jpg');
+    background-image: url('./images/products_banner.jpg');
     background-position: center;
     background-size: fill;
     background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
+  }
+
+  .page__title {
+    background-color:#ffff;
+    padding: .5em;
+    border-radius: .25em;
+    color: black;
+    font-size: 5rem;
   }
   
   .contact {

@@ -14,7 +14,7 @@ function Product() {
     }, []); 
         return (
             <div className='product'>
-                <h1>Check it out these products dawg!</h1>
+                <h1>Our Complete Collection of CANdles</h1>
                 <div className='product__container'>
                     <div className='product__wrapper'>
                         <ul className='product__ul'>

@@ -55,8 +55,6 @@
 
 input:hover, textarea:hover {
     background-color: #2424244c;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.072);
-    border: solid #ffff 1px;
     transform: translateY(-.3rem);
     transition: all .3s ease-in-out;
 }

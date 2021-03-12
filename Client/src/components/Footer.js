@@ -53,10 +53,10 @@ function Footer() {
         <div className='footer-container'>
             <section className='footer-subscription'>
                 <p className='footer-subscription-heading'>
-                    Something down here Broh!
+                    Want more CANdles?
                 </p>
                 <p className='footer-subscription-text'>
-                    More stuff down here Broh...
+                    Subscribe and receive awesome CANdles updates!
                 </p>
                 <div className='input areas'>
                     <div className="input-container">

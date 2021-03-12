@@ -9,14 +9,15 @@ function HomeSection() {
         <div className='home-container'>
             <video src={video2} autoPlay loop muted />
             
-            <h1>Beer Can Candles Broh!</h1>
-            <p>So sick!</p>
+            <h1>CANdles</h1>
+            <p>Earth-friendly wax + recycled craft beer cans.</p>
             
             <div className="home-btns">
                 <Button 
                 className='btns' 
                 buttonStyle='btn--outline'
                 buttonSize='btn--large'
+                page="https://www.etsy.com/shop/CANdles5280"
                 >
                     ETSY
                 </Button>
@@ -24,6 +25,7 @@ function HomeSection() {
                 className='btns' 
                 buttonStyle='btn--primary'
                 buttonSize='btn--large'
+                page="/contact"
                 >
                     CONTACT
                 </Button>

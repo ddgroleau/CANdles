@@ -5,7 +5,10 @@ import AboutCard from '../About';
 function About() {
     return (
         <>
-    <h1 className='about'>About Us</h1>
+        <div className="about">
+            <h1>About Us</h1>
+            </div>
+        
     <AboutCard />
     </>
     )

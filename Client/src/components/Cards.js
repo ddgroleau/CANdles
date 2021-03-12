@@ -16,7 +16,7 @@ useEffect(() => {
 }, []); 
     return (
         <div className='cards'>
-            <h1>Check it out broh!</h1>
+            <a href="https://www.etsy.com/shop/CANdles5280"><h1>Check out our active listings on Etsy!</h1></a>
             <div className='cards__container'>
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>
