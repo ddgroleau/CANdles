@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const Router = express.Router();
 const { response, request } = require('express');
 const subscribers = require('./routes/subscribers');
-const products = require('./routes/products');
+const product = require('./routes/product');
 const MongoDB = require('./database');
 
 
@@ -29,7 +29,7 @@ console.log(__dirname);
 */
 
 app.use('/', subscribers);
-app.use('/', products);
+app.use('/', product);
 
 
 // Error Handling 

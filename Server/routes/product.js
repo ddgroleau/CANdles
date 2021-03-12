@@ -2,8 +2,8 @@
 const express = require('express');
 const Router = express.Router()
 const { MongoDB, client } = require('../database')
-const readProducts = require('../controllers/products-controller');
+const readProducts = require('../controllers/product-controller');
 
-Router.get('/products', readProducts);
+Router.get('/product', readProducts);
 
 module.exports = Router;

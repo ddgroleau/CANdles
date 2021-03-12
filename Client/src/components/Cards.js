@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CardItem from './CardItem';
 import '../assets/cards.css';
-import Account from './API';
+import Account from './EtsyAPI';
 
 function Cards() {
 const [listings, setListings] = useState([{

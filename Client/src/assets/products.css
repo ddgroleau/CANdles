@@ -1,0 +1,138 @@
+.product {
+    padding: 4rem;
+    background: #fff;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .product__container {
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+  }
+  
+  .product__wrapper {
+    display: flex;
+   width: 100%;
+   height: fit-content;
+    margin: 1em 0 1em;
+  }
+  
+  .product__ul {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 24px;
+    list-style-type: none;
+  }
+
+  .product__li__wrapper {
+    display: flex;
+    width: 33%;
+    height: 20%;
+    padding: 1rem .5rem;
+    margin: .1rem;
+    border-radius: 10px;
+  }
+  
+  .product__li {
+    display: flex;
+    flex: 1;
+    width: 50%;
+    margin: 0 1rem;
+    border-radius: 1em;
+  }
+
+
+  .fade-img {
+    animation-name: fade-img;
+    animation-duration: 2s;
+  }
+  
+  .product__li__img {
+    display: block;
+    width: 12em;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    border-radius: 1em;
+    transition: all 0.2s linear;
+  }
+  
+  .product__li:hover {
+    transform: scale(1.1);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.161);
+    transition: .3s ease-in-out;
+  }
+  
+  .product__li__info {
+    padding: 1em;
+    width: 10em;
+    align-self: center;
+  }
+
+  
+  .product__li__text {
+    color: #252e48;
+    font-size: 18px;
+    width: 100%;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+    align-self: center;
+  }
+
+  .producer__li__text {
+    color: #252e48;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    .content__blog__container {
+      width: 84%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .product__ul {
+      display: flex;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .product__li {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 1082px) {
+    .product__ul {
+      justify-content: center;
+    }
+  }
+
+
+  @media only screen and (max-width: 960px) {
+  .product__ul {
+    flex-flow: column wrap;
+    align-items: center;
+    border: solid black 1px;
+  }
+  .product__li__wrapper {
+  width: 50%;
+  justify-self: center;
+  }
+
+  .product__li__img {
+  width: auto;
+  }
+}
