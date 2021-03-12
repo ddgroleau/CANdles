@@ -1,5 +1,3 @@
-
-
 const ProductAPI = {
     url: '/product',
     async getProducts() {
