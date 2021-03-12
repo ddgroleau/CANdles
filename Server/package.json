@@ -10,7 +10,9 @@
     "express-router": "0.0.1",
     "fetch-jsonp": "^1.1.3",
     "mongodb": "^3.6.4",
-    "nodemon": "^2.0.7"
+    "nodemailer": "^6.5.0",
+    "nodemon": "^2.0.7",
+    "xoauth2": "^1.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

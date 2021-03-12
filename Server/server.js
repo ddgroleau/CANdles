@@ -6,6 +6,7 @@ const Router = express.Router();
 const { response, request } = require('express');
 const subscribers = require('./routes/subscribers');
 const product = require('./routes/product');
+const email = require('./routes/email')
 const MongoDB = require('./database');
 
 
@@ -30,6 +31,7 @@ console.log(__dirname);
 
 app.use('/', subscribers);
 app.use('/', product);
+app.use('/', email);
 
 
 // Error Handling 
