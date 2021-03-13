@@ -22,12 +22,10 @@ app.use(express.json({limit: '1mb'}));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 
-
-app.use(express.static(path.join(__dirname, "../client/build")));
+app.use(express.static(path.join(__dirname, "../Client/build")));
 app.get('/', (req,res)=> {
-    res.sendFile(path.join(__dirname.replace("/server", ""), "../client/build"));
+    res.sendFile(path.join(__dirname.replace("/Server", ""), "/Client/build"));
 });
-console.log(__dirname);
 
 
 app.use('/', subscribers);
