@@ -36,7 +36,6 @@ function ContactForm() {
                     id="email__input"
                     type="email"
                     placeholder="What's your email?"
-
                     ></input>
                     <textarea 
                     className="message__textarea"
