@@ -3,6 +3,7 @@ const ProductAPI = {
     async getProducts() {
         const request = await fetch(this.url);
         const response = await request.json()
+        console.log(response)
         return response;
     }
 }

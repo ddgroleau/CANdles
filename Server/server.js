@@ -9,7 +9,7 @@ const product = require('./routes/product');
 const email = require('./routes/email')
 const MongoDB = require('./database');
 const path = require('path');
-
+const etsy = require('./routes/etsy');
 
 // EXPRESS
 const app = express();
@@ -31,6 +31,7 @@ app.get('/', (req,res)=> {
 app.use('/', subscribers);
 app.use('/', product);
 app.use('/', email);
+app.use('/', etsy);
 
 
 // Error Handling 
