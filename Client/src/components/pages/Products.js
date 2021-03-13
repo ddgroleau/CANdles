@@ -6,7 +6,7 @@ function Products() {
     return (
         <>
         <div className="products">
-            <h1 className='page__title'>Products</h1>
+            <h1>Products</h1>
         </div>
     <Product />
     </>

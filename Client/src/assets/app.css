@@ -24,9 +24,11 @@
   }
 
   .about h1 {
-  color:black;
-  margin-left: 35%;
-  font-size: 5rem;
+    background-color:rgba(255, 255, 255, 0.62);
+    font-size: 5rem;
+    padding: 1rem;
+    border-radius: .75rem;
+    color: black;
   }
   
   .products {
@@ -36,19 +38,25 @@
     background-repeat: no-repeat;
   }
 
-  .page__title {
-    background-color:#ffff;
-    padding: .5em;
-    border-radius: .25em;
-    color: black;
+  .products h1{
+    background-color:rgba(255, 255, 255, 0.62);
     font-size: 5rem;
+    padding: 1rem;
+    border-radius: .75rem;
+    color: black;
   }
   
   .contact {
-    background-image: url('./images/img-8.jpg');
+    background-image: url('./images/contact_banner.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
+  }
+
+  .contact h1 {
+    color:#fff;
+    font-size: 5rem;
+    padding: 1rem;
+    background-color: #24242497;
+    border-radius: .75rem;
   }

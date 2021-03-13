@@ -3,6 +3,7 @@ import HomeSection from '../HomeSection';
 import React from 'react';
 import Cards from '../Cards'
 import Footer from '../Footer';
+import '../../assets/app.css'
 
 function Home() {
     return (
