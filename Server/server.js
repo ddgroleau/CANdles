@@ -8,6 +8,7 @@ const subscribers = require('./routes/subscribers');
 const product = require('./routes/product');
 const email = require('./routes/email')
 const MongoDB = require('./database');
+const path = require('path');
 
 
 // EXPRESS
@@ -21,13 +22,13 @@ app.use(express.json({limit: '1mb'}));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 
-/*
+
 app.use(express.static(path.join(__dirname, "../client/build")));
 app.get('/', (req,res)=> {
     res.sendFile(path.join(__dirname.replace("/server", ""), "../client/build"));
 });
 console.log(__dirname);
-*/
+
 
 app.use('/', subscribers);
 app.use('/', product);
