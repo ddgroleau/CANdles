@@ -142,16 +142,16 @@
   }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 390px) {
   .product__li__info {
     display:none;
 }
 
 .product__li__img {
   width: auto;
-  min-height: auto;;
-  min-width: 240px;
-  margin-left: 8%;
+  min-height: 400px;
+  min-width: 300px;
+  margin-left: 2%;
   position: relative;
   }
 }
