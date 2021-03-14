@@ -4,10 +4,13 @@ import '../assets/contact.css';
 const handleClick = async () => {
     const name = document.getElementById('name__input').value;
     const email = document.getElementById('email__input').value;
-    const message = document.getElementById('message__textarea').value;  
+    const message = document.getElementById('message__textarea').value;
+    const serverMessage = document.getElementById("serverMessage")
+    serverMessage.style.visibility = "visible"  
     if (name === "" || email === "" || message === "") {
-        console.log("click");
+        serverMessage.innerText = "Please fill all fields."
     } else {
+        serverMessage.innerText = "Sending your message..."
         const request = await fetch('/email', {
             method: 'POST',
             headers: {
@@ -17,6 +20,9 @@ const handleClick = async () => {
         });
         const response = await request.json();
         console.log(response);
+        if (JSON.stringify(response).includes('success')) {
+        serverMessage.innerText = "Message Sent!"  
+        }
     }
 }
 
@@ -47,6 +53,7 @@ function ContactForm() {
                     type="submit"
                     onClick={handleClick}
                     >Send it!</button>
+                    <p id= "serverMessage" className="serverMessage"></p>
                 </div>
             </div>
         </div>
