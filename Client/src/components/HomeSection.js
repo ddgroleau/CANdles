@@ -7,7 +7,7 @@ import video2 from "../assets/videos/video-2.mp4"
 function HomeSection() {
     return (
         <div className='home-container'>
-            <video src={video2} autoPlay loop muted playsinline />
+            <video src={video2} autoPlay loop muted playsInLine />
             
             <h1>CANdles</h1>
             <p>Earth-friendly wax + recycled craft beer cans.</p>
