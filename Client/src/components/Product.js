@@ -10,7 +10,11 @@ function Product() {
         product: ""
     }]);
     useEffect(() => {
-        ProductAPI.getProducts().then(res => setProducts(res))
+        const productAbortController = new AbortController();
+        ProductAPI.getProducts(productAbortController).then(res => setProducts(res))
+        return () => {
+            productAbortController.abort();
+          };
     }, []); 
         return (
             <div className='product'>

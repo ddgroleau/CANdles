@@ -12,7 +12,11 @@ const [listings, setListings] = useState([{
     MainImage: {"url_fullxfull": ""}
 }]);
 useEffect(() => {
-    Account.getJsonpListing().then(res => setListings(res))
+    const listingsAbortController = new AbortController();
+    Account.getJsonpListing(listingsAbortController).then(res => setListings(res))
+    return () => {
+        listingsAbortController.abort();
+      };
 }, []); 
     return (
         <div className='cards'>

@@ -21,9 +21,9 @@ const Account = {
       const userResponse = await userRequest.json();
       return userResponse.results
     },
-    async getJsonpListing() {
+    async getJsonpListing(listingsAbortController) {
       const data = await getAPI();
-      const listingRequest = await fetchJsonp(await data.LISTINGS_URL + await data.KEY + "&includes=MainImage");
+      const listingRequest = await fetchJsonp(await data.LISTINGS_URL + await data.KEY + "&includes=MainImage", { signal: listingsAbortController.signal });
       const listingsResponse = await listingRequest.json();
       return listingsResponse.results;
     }
