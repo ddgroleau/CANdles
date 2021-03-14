@@ -14,7 +14,7 @@ const readProducts = async (request, response) => {
         }
         else {
             console.log('Establishing connection to database.') 
-            setTimeout(()=>getProducts(),3000)
+            setTimeout(()=>getProducts(),5000)
         }
     }
     getProducts()      
