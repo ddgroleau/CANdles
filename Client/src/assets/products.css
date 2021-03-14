@@ -128,11 +128,12 @@
     width: 100%;
   }
   .product__li__wrapper {
-  width: 90%;
+  width: 95%;
   justify-self: center;
   }
 
   .product__li__img {
   width: auto;
+  min-width: 250;
   }
 }
