@@ -125,7 +125,7 @@
   .product__ul {
     flex-flow: column wrap;
     align-items: center;
-    border: solid black 1px;
+    width: 100%;
   }
   .product__li__wrapper {
   width: 50%;
