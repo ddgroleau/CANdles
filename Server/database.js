@@ -17,7 +17,7 @@ const MongoDB = {
   }
 };
 
-module.exports = { MongoDB, client, connectDb};
+module.exports = { MongoDB, client, connectDb };
 
 
 
