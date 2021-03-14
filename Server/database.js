@@ -5,10 +5,10 @@ const client= new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: 
 
 function connectDb() {
     client.connect(err => {
-      if (err) console.log('Connection to database failed. ' + err);
-      console.log(`Connection to database: ${client.db("Candles").databaseName} successful!`);
+      if (err) { console.log('Connection to database failed. ' + err) }
+      else { console.log(`Connection to database: ${client.db("Candles").databaseName} successful!`) };
     });
-  return true;
+  return client.isConnected();
 }
 
 const MongoDB = {
