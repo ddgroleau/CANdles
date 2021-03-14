@@ -5,6 +5,10 @@ video {
     position: fixed;
     z-index: -1;
   }
+
+  p {
+    text-align: center;
+  }
   
   .home-container {
     /* background: url('./images/img-home.jpg') center center/cover no-repeat; */
