@@ -148,8 +148,8 @@
 }
 
 .product__li__img {
-  min-height: 400px;
-  min-width: 300px;
+  min-height: 800px;
+  min-width: 600px;
   margin-left: 2%;
 }
 }
