@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ProductItem from './ProductItem';
 import '../assets/products.css';
 import ProductAPI from './ProductAPI';
-import test from './test.jpg';
 
 function Product() {
     const [products, setProducts] = useState([{
@@ -25,7 +24,7 @@ function Product() {
                         <ul className='product__ul'>
                         {products.map((products, id) =>
                             <ProductItem           
-                            imageUrl={test}
+                            imageUrl={products.imageUrl}
                             producer={products.producer}
                             product={products.product}
                             key={id}
