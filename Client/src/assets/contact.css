@@ -90,6 +90,6 @@ input:hover, textarea:hover {
 
 @media screen and (max-width: 390) {
     input, textarea {
-        width: 100% !important;
+        width: 350px !important;
     }
 }
