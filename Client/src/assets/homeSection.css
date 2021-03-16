@@ -46,7 +46,7 @@ video {
   @media screen and (max-width: 960px) {
     .home-container > h1 {
       font-size: 70px;
-      margin-top: -150px;
+      margin-top: -20%;
     }
   }
   
@@ -70,9 +70,8 @@ video {
     }
   }
 
-  @media screen and (max-width: 380px) {
-    .home-container > h1 {
-      font-size: 30px;
-      margin-top: -60%;
+  @media screen and (max-width: 390px) {
+    .home-container {
+      margin-top: -20%;
     }
   }
