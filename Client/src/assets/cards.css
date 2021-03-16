@@ -122,3 +122,9 @@
       margin-bottom: 2rem;
     }
   }
+
+  @media  screen and (max-width:390px) {
+    .cards__container {
+      width: 100%;
+    }
+  }

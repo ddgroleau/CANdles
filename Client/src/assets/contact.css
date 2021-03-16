@@ -87,3 +87,9 @@ input:hover, textarea:hover {
         width: 80% !important;
     }
 }
+
+@media screen and (max-width: 390) {
+    input, textarea {
+        width: 100% !important;
+    }
+}

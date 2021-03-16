@@ -73,5 +73,10 @@ video {
   @media screen and (max-width: 390px) {
     .home-container {
       margin-top: -20%;
+      width:390px;
+    }
+
+    video {
+      width: 390px;
     }
   }
