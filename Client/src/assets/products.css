@@ -134,7 +134,6 @@
   margin-left: 0;
   min-height: 400px;
   min-width: 320px;
-  border: solid purple 2px;
   }
 
   .product__li__img {
@@ -149,9 +148,10 @@
     display:none;
 }
 
-.product__li__img {
+.product__li__wrapper {
+  width: 100%;
+  margin-left: 0;
   min-height: 400px;
   min-width: 320px;
-  border: solid cyan 2px;
-}
+  }
 }

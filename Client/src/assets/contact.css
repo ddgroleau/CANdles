@@ -83,13 +83,13 @@ input:hover, textarea:hover {
 }
 
 @media screen and (max-width: 960px) {
-    input, textarea {
-        width: 80% !important;
+    .contact__form__container input, .message__textarea {
+        width: 350px !important;
     }
 }
 
 @media screen and (max-width: 390) {
-    input, textarea {
+    .contact__form__container input, .message__textarea{
         width: 350px !important;
     }
 }
