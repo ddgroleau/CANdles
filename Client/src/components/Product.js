@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ProductItem from './ProductItem';
 import '../assets/products.css';
 import ProductAPI from './ProductAPI';
+import test from './test.jpg';
 
 function Product() {
     const [products, setProducts] = useState([{
@@ -22,9 +23,9 @@ function Product() {
                 <div className='product__container'>
                     <div className='product__wrapper'>
                         <ul className='product__ul'>
-                        {products.map((products, id) => 
+                        {products.map((products, id) =>
                             <ProductItem           
-                            imageUrl={products.imageUrl}
+                            imageUrl={test}
                             producer={products.producer}
                             product={products.product}
                             key={id}
