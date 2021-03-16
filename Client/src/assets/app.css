@@ -60,3 +60,12 @@
     background-color: #24242497;
     border-radius: .75rem;
   }
+
+@media screen and (max-width:390px) {
+  .home,
+  .products,
+  .contact,
+  .about {
+    width: 390px;
+  }
+}
