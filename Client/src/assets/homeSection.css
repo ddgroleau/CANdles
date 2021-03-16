@@ -70,6 +70,12 @@ video {
     }
   }
 
+  @media screen and (max-width: 414px) {
+    .home-container {
+      margin-top: -30%;
+    }
+  }
+  
   @media screen and (max-width: 390px) {
     .home-container {
       margin-top: -20%;
