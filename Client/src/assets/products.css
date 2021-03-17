@@ -149,7 +149,10 @@
 }
 
 .product__li__wrapper {
-  margin-left: 0;
-  min-width: 100%;
+  display:none;
   }
+
+  .product__li__img {
+    display: none;
+    }
 }
